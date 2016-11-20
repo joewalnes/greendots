@@ -28,7 +28,9 @@ def main():
         stderr.write('ERROR: missing text\n')
         exit(1)
 
-    start_date = date(2015, 11, 15)  # TODO: a year ago, must be sunday
+    one_year_ago = date.today() - timedelta(days=365)
+    while one_year_ago.weekday() != 6: # go to start of week (sunday)
+        one_year_ago -= timedelta(days=1)
 
     canvas = Bitmap(width=52, height=7)  # year of weeks
     
@@ -46,7 +48,7 @@ def main():
     print('echo "Generating a bunch of git commits..."')
     print('git init')
     n = 0
-    for contrib_date in bitmap_to_contribution_dates(canvas, start_date):
+    for contrib_date in bitmap_to_contribution_dates(canvas, one_year_ago):
         stamp = datetime.combine(contrib_date, time(12, 0)).isoformat()
         for i in range(commits_per_pixel):
             print('echo {} > .greendot'.format(n))
