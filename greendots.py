@@ -16,6 +16,9 @@ from simplefont import string_bitmap
 from datetime import date, datetime, time, timedelta
 from sys import argv, exit, stdout, stderr
 
+# The pixel will get darker based on number of commits.
+# The 4 shades, from lightest to darkest are on 1, 4, 8, 11
+# commits. So 11 commits per day will give the darkest color.
 commits_per_pixel = 11
 
 def main():
