@@ -15,13 +15,13 @@ class Bitmap:
                 if y + py >= 0 and y + py < self.height and x + px >= 0 and x + px < self.width:
                     self.data[y + py][x + px] = op(old, pixel)
 
-    def dump(self):
+    def dump(self, out=stdout):
         """Dump this to stdout, for debugging."""
         for row in self.data:
             for pixel in row:
-                stdout.write('#' if pixel else ' ')
-            stdout.write('\n')
-        stdout.flush()
+                out.write('#' if pixel else ' ')
+            out.write('\n')
+        out.flush()
 
 
 
