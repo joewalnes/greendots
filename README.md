@@ -9,6 +9,8 @@ This takes a message, encodes it to a simple bitmap font, and generates a bunch 
 
 ![Example profile](example.png)
 
+See it for realz: https://github.com/joewalnes
+
 10 second tutorial
 ------------------
 
