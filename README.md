@@ -23,7 +23,7 @@ $ ./greendots.py "Yo yo!" > ../my-repo/make-my-repo.sh
 
 You only have 6 characters that can be displayed. Make it count.
 
-Then run that scrip to create a repo. This will generate lots of commits in your new repo.
+Then run that script to create a repo. This will generate lots of commits in your new repo.
 
 ```bash
 $ cd ../my-repo
